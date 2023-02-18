@@ -5,7 +5,7 @@ import { Todo } from './Todo'
 
 const TodoList = ({ todos, handleSetComplete,handleDelete,activeFilter,showAllTodos,showActiveTodos,showCompletedTodos,handleClearComplete }) => {
   return (
-    <div className='flex flex-col mt-7 rounded-lg overflow-hidden shadow-2xl'>
+    <div className='flex flex-col mt-7 rounded-sm overflow-hidden shadow-2xl'>
       {todos.map(todo => {
         return (
           <Todo 

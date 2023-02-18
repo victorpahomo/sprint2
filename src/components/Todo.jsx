@@ -9,7 +9,7 @@ export const Todo = ({ todo, handleSetComplete, handleDelete }) => {
             <div className="flex items-center">
                 {
                     completed ? (
-                        <div onClick={() => handleSetComplete(id)} className="bg-green-700 p-1 rounded-full cursor-pointer">
+                        <div onClick={() => handleSetComplete(id)} className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-500 p-1 rounded-full cursor-pointer">
                             <img
                                 className="h-4 w-4 " src="/check-icon.svg" alt="Check Icon"
                             />

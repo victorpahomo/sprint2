@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import Title from './components/Title'
 import TodoInput from './components/TodoInput'
-import './App.css'
 import TodoList from './components/TodoList'
+import './App.css'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -97,21 +97,26 @@ function App() {
   }, [activeFilter, todos]);
 
   return (
-    <div className='bg-gray-900 min-h-screen font-inter h-full text-gray-100 flex items-center justify-center py-20 px-5'>
-      <div className='container flex flex-col max-w-xl'>
-        <Title />
-        <TodoInput addTodo={addTodo} />
-        <TodoList
-          activeFilter={activeFilter}
-          todos={filteredTodos}
-          showAllTodos={showAllTodos}
-          showActiveTodos={showActiveTodos}
-          showCompletedTodos={showCompletedTodos}
-          handleSetComplete={handleSetComplete}
-          handleDelete={handleDelete}
-          handleClearComplete={handleClearComplete} />
+    <div className='bg-gray-900 min-h-screen font-josefin h-full text-gray-100 flex items-center justify-center relative'>
+      <div className='absolute top-0'>
+        <img className=' w-full h-auto' src="https://github.com/victorpahomo/sprint2/blob/main/src/assets/img/bg-desktop-dark.jpg?raw=true" alt="" />
       </div>
+      <div className='min-h-screen w-full flex items-center justify-center  py-20 px-5 z-10'>
+        <div className='container flex flex-col max-w-xl'>
+          <Title />
+          <TodoInput addTodo={addTodo} />
+          <TodoList
+            activeFilter={activeFilter}
+            todos={filteredTodos}
+            showAllTodos={showAllTodos}
+            showActiveTodos={showActiveTodos}
+            showCompletedTodos={showCompletedTodos}
+            handleSetComplete={handleSetComplete}
+            handleDelete={handleDelete}
+            handleClearComplete={handleClearComplete} />
+        </div>
 
+      </div>
     </div>
   );
 }
